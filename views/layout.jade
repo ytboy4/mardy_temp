@@ -1,0 +1,61 @@
+doctype html5
+html
+  head
+    title= 'Mardy AFC | ' + pageTitle
+    link(rel='shortcut icon', href='/favicon.png', type='image/png')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css')
+    link(type='text/css', rel='stylesheet', href='./font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='./bootstrap-social-buttons/social-buttons.css')
+    link(rel='stylesheet', id='camera-css',  href='./Camera/css/camera.css' type='text/css' media='all')
+    link(rel='stylesheet', type='text/css', href='./css/main.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js')
+    script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js')
+    script(type='text/javascript', src='./Camera/scripts/jquery.min.js')
+    script(type='text/javascript', src='./Camera/scripts/jquery.mobile.customized.min.js')
+    script(type='text/javascript', src='./Camera/scripts/jquery.easing.1.3.js')
+    script(type='text/javascript', src='./Camera/scripts/camera.min.js')
+    script(type='text/javascript', src='./js/content.js')
+    script.
+      jQuery(function(){
+        jQuery('#camera_wrap_1').camera({
+          thumbnails: false,
+          height: '200px'
+        });
+      });
+
+  body
+    - var nav_classes = ['navbar','navbar-fixed-top','navbar-inverse']
+    div(class=nav_classes)
+      div.container
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        a.navbar-brand(href="#")
+        - var nav_collapse_classes = ['nav-collapse', 'navbar-responsive-collapse', 'collapse']
+        div(class=nav_collapse_classes, style='height: auto;')
+          ul.nav.navbar-nav
+            li(class=(pageTitle === 'Home' ? 'active' : ''))
+              a(href='/') Home
+            li(class=(pageTitle === 'About' ? 'active' : ''))
+              a(href='about') About
+            li(class=(pageTitle === 'History' ? 'active' : ''))
+              a(href='history') History
+            li(class=(pageTitle === 'Teams' ? 'active' : ''))
+              a(href='#') Teams
+            li(class=(pageTitle === 'Events' ? 'active' : ''))
+              a(href='events') Events
+            li(class=(pageTitle === 'Contact Us' ? 'active' : ''))
+              a(href='contact') Contact
+
+    div.container(style='padding-top: 70px;')
+      div.row
+        div.col-lg-2.pull-left
+          img(src='./images/badge_draft3_h200.png')
+
+    div.container
+      div.spacer
+
+    block content

@@ -1,0 +1,92 @@
+    		@media (min-width: 980px) {
+      			body {
+        			/*padding-top: 60px;*/
+      			}
+      			.linediv-l {
+	        		border-right: 1px white solid;
+      			}
+      			.linediv-r {
+	        		border-left: 1px white solid;
+      			}
+    		}
+      
+     		/* Landscape phones and down */
+		    @media (max-width: 480px) {
+      			.copy {
+	        		padding: 2.5% 10%;
+      			}
+      			.linediv-l {
+			        border-bottom: 1px white solid;
+      			}
+      			.linediv-r {
+	        		border-top: 1px white solid;
+      			}
+    		}
+
+    		/* All form factors */
+    		/* Main body and headings */
+      		body {
+        		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        		margin-left: 25px;
+        		margin-bottom: 20px;
+      		}
+      		.heading, .subheading {
+        		font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        		text-align: center;
+      		}
+      		p.lead {
+        		padding-top: 1.5%;
+        		font-size: 24px;
+		        line-height: 30px;
+      		}		
+      		p {
+        		font-size: 18px;
+        		line-height: 24px;
+      		}
+      		tbody {
+      			width: 300px;
+      		}
+      		.spacer {
+      			height: 10px;
+      			margin: 10px 0;
+      			border-bottom: 1px solid #cccccc;
+      		}
+      		.sponsor-right {
+      			margin: 0 0 6px 0;
+      		}
+      		.sponsor-right, .image {
+      			margin-right: 10px;
+      		}
+      		.stat-table {
+      			width: 300px;
+      			line-height: 16px;
+      		}
+      		.team-home, .team-away, .score{
+      			display: block;
+      			float: left;
+      			padding: 0 8px;
+      		}
+      		.team-home, .team-away{
+      			width: 42.5%;
+      		}
+      		.team-home {
+      			text-align: right;
+      		}
+      		.team-away {
+      			text-align: left;
+      		}
+      		.score {
+      			text-align: center;
+      			width: 15%;
+      		}
+      		.footer {
+      			background-color:#777777;
+        		color: #cccccc;
+        		text-align: center;
+      		}
+      		.footer p {
+        		font-size: 11px;
+      		}
+      		.footer a {
+        		color: #ccccff;
+      		}

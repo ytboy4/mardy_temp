@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div.container
+    div.row
+      div.col-lg-5
+        div.content(style='margin-left: 20px;')
+          div.page(style='display: block;')
+            h1= pageTitle
+            div.pitch-loc
+            h2 Find the pitch
+            address.
+              <strong>Mardy Park</strong><br>
+              St Davids Road<br>
+              Mardy<br>
+              Abergavenny<br>
+              NP7 6HF<br>
+            h2 Secretary
+            address.
+              <strong>Ashley Barber</strong><br>
+              24 Old Barn Way<br>
+              Abergavenny<br>
+              NP7 6DY<br>
+              <abbr title="Phone">P:</abbr>07584062875<br><br>
+              <a href="mailto:info@mardyafc.org.uk">info@mardyafc.org.uk</a>
+      div.col-lg-7
+        div.map-tog
+          a(href='#') Show/Hide map
+        div.pitch-map
+          <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.com/maps/ms?msa=0&amp;msid=212106581438958228532.0004e2f76ce4886931354&amp;ie=UTF8&amp;t=h&amp;z=17&amp;output=embed"></iframe><br /><small>View <a href="http://www.google.com/maps/ms?msa=0&amp;msid=212106581438958228532.0004e2f76ce4886931354&amp;ie=UTF8&amp;t=h&amp;z=17&amp;source=embed" style="color:#0000FF;text-align:left">Mardy AFC</a> in a larger map</small>
