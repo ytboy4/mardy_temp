@@ -3,6 +3,7 @@ var history = require('./history');
 var f_fix = require('./f-fix');
 var events = require('./events');
 var contact = require('./contact');
+var errors = require('./errors');
 
 module.exports = function(app){
 
@@ -25,4 +26,7 @@ module.exports = function(app){
 
 	// contact page
 	contact(app);
+
+	// errors pages
+	errors(app);
 }
