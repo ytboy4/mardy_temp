@@ -43,8 +43,21 @@ html
               a(href='about') About
             li(class=(pageTitle === 'History' ? 'active' : ''))
               a(href='history') History
-            li(class=(pageTitle === 'Teams' ? 'active' : ''))
-              a(href='#') Teams
+            //li(class=(pageTitle === 'Teams' ? 'active' : ''))
+            //  a(href='#') Teams
+            li.dropdown
+              a(href='#', class='dropdown-toggle', data-toggle='dropdown') Teams <b class="caret"></b>
+              ul.dropdown-menu
+                li.dropdown-header 1<sup>st</sup> Team
+                li.sub#f-fix
+                  a(href='/f-fix') Fixtures
+                li.sub#f-table
+                  a(href='/f-table') Table
+                li.dropdown-header Reserve Team
+                li.sub#r-fix
+                  a(href='/r-fix') Fixtures
+                li.sub#r-table
+                  a(href='/r-table') Table
             li(class=(pageTitle === 'Events' ? 'active' : ''))
               a(href='events') Events
             li(class=(pageTitle === 'Contact Us' ? 'active' : ''))
@@ -54,8 +67,107 @@ html
       div.row
         div.col-lg-2.pull-left
           img(src='./images/badge_draft3_h200.png')
+          div.row
+            div.col-lg-10.text-center
+              // AddThis Smart Layers Begin
+              // Go to http://www.addthis.com/get/smart-layers to customize
+              script(src='//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5204af7854254081')
+              script.
+                addthis.layers({
+                  'theme' : 'transparent',
+                  'share' : {
+                    'position' : 'left',
+                    'numPreferredServices' : 3
+                  },
+                  'follow' : {
+                    'services' : [
+                      {'service': 'facebook', 'id': '132416190135951'},
+                      {'service': 'twitter', 'id': 'mardyafc'}
+                    ]
+                  },
+                  'whatsnext' : {}
+                });
+              // AddThis Smart Layers END
+        div.col-lg-6
+          h1 Mardy AFC
+          p.lead Welcome to the Mardy AFC Website
+          p.hide.
+            Mardy AFC are a football club from Mardy, Abergavenny who were founded in 1897. They currently run 2 senior teams playing in the Gwent County Division 2 and Gwent Central Division 1. The club also run many junior teams including girls teams and a under 18s team who play in the Gwent County Youth League.
+          div.row
+            div.col-lg-6.pull-left
+              h4.table-header.text-center Results
+              table.stat-table
+                tr
+                  th.text-center(colspan='4') Gwent County Div 2 Sat 5th Oct 2013
+                tbody
+                tr
+                  td.match-details.
+                    <small>
+                      <span class="team-home">Lucas Cwmbran</span>
+                      <span class="score">0 - 2</span>
+                      <span class="team-away">Mardy AFC</span>
+                    </small>
+                  //
+                    td.match-details.
+                      <small>
+                        <span class="team-home">Lucas Cwmbran</span>
+                        <span class="score">0 - 2</span>
+                        <span class="team-away">Mardy AFC</span>
+                      </small>
+            div.col-lg-6.pull-right
+              h4.table-header.text-center Fixtures
+              table.stat-table
+                tr
+                  th.text-center(colspan='4') County Motors Challenge Cup R2 Sat 12th Oct 2013
+                tbody
+                tr
+                  td.match-details.
+                    <small>
+                      <span class="team-home">Mardy AFC</span>
+                      <span class="score">14:30</span>
+                      <span class="team-away"><a href="http://www.clubwebsite.co.uk/tredegarathleticfc/73713/Home">Tredegar Athletic</a></span>
+                    </small>
+                  //
+                    td.match-details.
+                      <small>
+                        <span class="team-home">Lucas Cwmbran</span>
+                        <span class="score">0 - 2</span>
+                        <span class="team-away"><a href="http://www.clubwebsite.co.uk/tredegarathleticfc/73713/Home">Tredegar Athletic</a></span>
+                      </small>
+        div.col-lg-4.pull-right
+          div.camera-wrap#camera_wrap_1(style='width: 370px;')
+            div(data-src='./images/photos/MardyOpen2013.jpg')
+            div(data-src='./images/photos/Mardy1stKit.jpg')
+            div(data-src='./images/photos/mardyjan1983.jpg')
+            div(data-src='./images/photos/cupfinal.jpg')
+            div(data-src='./images/photos/cupfinal19871.jpg')
+            div(data-src='./images/photos/mardyafc80s.jpg')
+            div(data-src='./images/photos/mardynov1984.jpg')
 
     div.container
       div.spacer
 
-    block content
+    div.container
+      div.row
+        div.col-lg-8
+          div.content(style='margin-left: 20px;')
+            div.page(style='display: block;')
+              block content
+        div.col-lg-4(style='border-left: 1px solid #cccccc;')
+          div.pull-right
+            a.twitter-timeline(href='https://twitter.com/mardyafc', height='250', width='350', data-widget-id='359284601383948289') Tweets by @mardyafc
+            script.
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          div
+            h2.text-right Sponsors
+            p.text-right(style='font-size: 18px;') Big thanks to the following for their support
+            img.sponsor-right(src='./images/belmont_350x100.png', style='float: right;')
+            a(href='http://www.keithpricegarages.com/', target='_blank')
+              img.sponsor-right(src='./images/keith-price-logo.jpg', height='44', width='160', style='float: right;')
+            a(href='http://swift4.com', target='_blank')
+              img.sponsor-right(src='./images/swift4.png', height='44', width='180', style='float: right;')
+            img.sponsor-right(src='http://placehold.it/160x85', style='float: right;')
+            a(href='http://ivorcooknewport.co.uk', target='_blank')
+              img.sponsor-right(src='./images/sponsors/ivorcook_h65.png', style='float: right;')
+            img.sponsor-right(src='http://placehold.it/350x65', style='float: right;')
+    include footer
